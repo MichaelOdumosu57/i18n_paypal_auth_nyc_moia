@@ -1,0 +1,181 @@
+@import "./styles/util";
+@import "./styles/fonts";
+
+.a_p_p_{
+
+	&Home{
+		&View{
+			// @include outline;
+			padding:0 0 0 0 ;
+			font-size:9px;
+			&  *{
+				color:white; 
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+
+		&Pod0{
+			// @include outline;
+			width: 100%;
+			display: flex;
+			flex-direction: row-reverse;
+			padding:20px 0;
+			background:var(--radial-bg-darkblue);
+
+			& * {
+				margin:0 20px 0 0 ;
+			}
+
+			&Button{
+				background:var(--radial-bg-green);
+				padding:20px;
+				border-radius: 20px;
+				font-size:3em;
+
+			}
+		}
+
+		&Pod1{
+			// @include outline;
+			width: 100%;
+			display: flex;
+			padding:20px 0;
+			justify-content: center;
+			background:var(--radial-bg-lightbrown);
+
+			& * {
+				margin:0 20px 0 0 ;
+			}
+
+			&Button{
+				background:var(--radial-bg-viogreen);
+				padding:10px;
+				min-width: 100px;
+			}
+		}		
+
+		&Pod2{
+			@include flex-column-center;
+			width: 100%;
+			padding:20px 0;
+			background-color: rgba(0,0,0,0.2);
+
+			
+
+			&Page0{
+				width:500px;
+				height: 800px;
+				background-color:#483248;
+				display: flex;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				justify-content: center;
+				padding:20px 0;
+
+				&Title{
+
+					&0{
+						font-size: 5em;
+						color:#04F9F2;
+						z-index: 5;
+						@include tac;
+					}
+
+					&1{
+						font-family: Waltograph;
+						font-size: 8em;
+						margin: -45px 0 0 0;
+						color: yellow;
+						@include tac;
+					}
+
+					&2{
+						
+						background-color: rgba(0,0,0,0.5);
+						transform: rotate(90deg);
+						transform-origin: center;
+						font-size: 6em;
+						// margin: 120px 0 0 0;
+						padding:0 20px;
+						letter-spacing: 40px;
+						width: 500px;
+					}
+
+				}
+
+
+				&Img{
+
+					&0{
+						background-image:url("./assets/media/home0.PNG");
+						background-size: contain;
+						height:100px;
+						width: 100px;						
+					}
+					&1{
+						background-image:url("./assets/media/home1.PNG");
+						background-size: contain;
+						height:100px;
+						width: 100px;						
+					}		
+					
+					&2{
+						background-image:url("./assets/media/home5.jpg");
+						background-size: cover;
+						height:400px;
+						width: 400px;	
+						border-radius: 1000px;	
+						display: flex;
+						align-items: center;
+						justify-content: center;				
+												
+					}
+				}
+
+				&Text{
+					&0{
+						font-size: 2em;
+						width: 80%;
+						@include tac;
+					}
+				}
+				&Item{
+					&0{
+
+					}
+
+					&1{
+						@include outline;
+						width: 100%;
+						
+					}
+				}
+			}
+		}
+	}
+	&Login{
+		&View{
+			@include flex-column-center;
+			font-size:9px;
+
+			& * {
+				margin: 20px 0;
+			}
+
+			h1 {
+				font-size: 6em;
+			}
+
+			&Button{
+				background: var(--radial-bg-orange);	
+				padding:30px 50px;
+				font-size: 3em;
+			}
+		}
+
+		&Pod0{
+
+		}
+	}
+}

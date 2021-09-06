@@ -19,7 +19,6 @@ let oktaAuth = new OktaAuth({
 })
 
 
-
 export default function App() {
 
     let  history = useHistory();
@@ -64,7 +63,12 @@ export default function App() {
                     <Route
                     path="/checkout"
                     exact
-                    component={CheckoutPod} />                        
+                    render={(props) => {
+
+                        (props as any).changeRoute = changeRoute;
+                        return <CheckoutPod  {...props} />
+                    }
+                    } />                        
                     
                 </Switch>
             </ Security>        

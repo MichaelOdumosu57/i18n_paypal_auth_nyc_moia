@@ -18,7 +18,9 @@ Only members of the project can read the README.md from the ignore folder
 ## Frontend
 * Reactjs 17.0.2
 * react router dom 5.0.2
-
+* okta 
+* react-paypal-js 7.3.3
+* gh-pages 3.2.3
 ## Backend
 
 
@@ -41,6 +43,9 @@ Only members of the project can read the README.md from the ignore folder
 ## Hosting
 * Netlify
 
+## Logging
+* SpringBoot
+* DigitalOcean
 ### CMS
 
 
@@ -115,9 +120,44 @@ refer to README.md in ignore
 ## Template Updates
 
 ## Notes
+* new year for bengali in april 14th
+    * new year is for many communities in some parts of india , thalind 
+* dialects
+    * bangla
+    Sylheti
+    Chittagonian
+* currencies
+    * taka 
+    * .85 for 1 dollar 
+    * max taka that a porsha can hold is 5 taka 
+* addresses in bengali
+    * same as US 
+    * in bengali they never use city they use district
+    * distrinct, provinces 
+    * cities even they sound the same Dhaka
+    * starts in Dhaka university , make huge structures to celebrate the 
+* festivities 
+    * Pohela Boishakh the new year
+        * white and red clothes
+        * fish rice, illish ( also national fish)
+        * add water to the rice a cultural way to make it last longer, panta bhat 
+        * people would carry big birds and owls and bring it out
+        * they also paint the road ( this happens at 12am)
+            * Alpona done in front of parliament buidlign
+            * Alpona in Kolkata for Mahalaya!
+            * largest in the world
 
 
 # Resources
+[](https://www.brooklyn-usa.org/bulletins-events/bengali-new-year-celebration-2020/)
+[purple hex codes](https://www.rapidtables.com/web/color/purple-color.html)
+[explore chinatown](http://www.explorechinatown.com/PDF/ExploreChinatown.pdf)
+* https://www.latestly.com/lifestyle/festivals-events/poila-baisakh-pohela-boishakh-2019-date-know-history-significance-behind-the-celebration-of-bengali-new-year-744890.html
+* https://www.shutterstock.com/search/bengali+new+year
+ pricing for translation
+* [add paypal to react SDK](https://developer.paypal.com/docs/business/checkout/configure-payments/single-page-app/#react)
+* [paypal script provider](https://paypal.github.io/react-paypal-js/?path=/docs/example-paypalbuttons--default)
+
 
 ## Snippets
 * build an image

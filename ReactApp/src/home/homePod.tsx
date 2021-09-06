@@ -66,7 +66,7 @@ export default class HomePod extends Component{
                 <nav
                 className={prefix({val:'Pod1'})}
                 >
-                    {this.languages.items}
+                    {/* {this.languages.items} */}
                 </nav>
                 <div
                 className={prefix({val:'Pod2'})}

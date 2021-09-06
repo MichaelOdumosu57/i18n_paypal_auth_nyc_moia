@@ -5,6 +5,7 @@
 	--color0:#04F9F2;
 	--color1:#483248;
 	--color2:#482948;
+	--color3:grey;
 }
 
 .a_p_p_{
@@ -477,5 +478,153 @@
 		&Pod0{
 
 		}
+	}
+
+	&Checkout{
+		&View{
+			display: flex;
+			justify-content: center;
+			font-size:9px;
+			padding:20px 0;
+			
+			* {
+				-moz-box-sizing: border-box; 
+				-webkit-box-sizing: border-box; 
+				box-sizing: border-box; 				
+			}
+
+		}
+
+		&Main{
+			&Pod{
+				// border:3px solid black;
+				flex-basis: 80%;
+				display: flex;
+				flex-wrap: wrap;
+				
+			}
+		}
+
+		&Pod0{
+
+						
+			padding:20px;
+			background-color:#00457C;
+			display: flex;
+			justify-content: space-between;
+			border-radius: 30px 30px 0 0 ;
+			flex: 1 0 100%;
+
+			h1 {
+				font-size: 6em;
+				color:white
+			}
+			
+			&Img{
+				&0{
+					
+					background-size: contain;
+					background-image: url("./assets/media/checkout0.png");
+					height:80px;
+					flex-basis: 15%;
+					background-repeat: no-repeat;
+					
+				}
+			}
+		}
+
+		@for $i from 1 through 2 {
+			&Pod#{$i}{
+				height: 500px;
+
+			}
+		}
+		&Pod1{
+			// @include outline;
+			flex-basis: 40%;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: flex-start;
+			padding:20px ;		
+
+
+			
+			& h2{
+				font-size: 3em;	
+			}
+
+			& h3{
+				font-size: 2em;	
+			}			
+
+			& *{
+				flex-basis: 100%;
+				margin:20px 0 0 0;
+			}
+
+			&Img{
+				&0{
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-image: url("./assets/media/checkout1.PNG");
+					height: 100px;
+					width:130px;
+					@include outline;
+					flex-basis: auto;
+				}
+			}		
+
+			&Item{
+				&0{
+					display: flex;
+					border-bottom: 1px solid black;
+					padding:20px 0;
+					& *{
+						margin:0 10px 0 0;
+					}
+					p{
+						font-size: 2em;
+					}
+				}
+
+				&1{
+					display: flex;
+					flex: 1 0 100%;
+					justify-content: space-between;
+					& *{
+						flex-basis:auto;
+					}
+				}
+			}	
+		}
+
+		&Pod2{
+			flex-basis: 60%;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: flex-start;
+			padding:20px ;	
+			
+			& h2{
+				font-size: 3em;	
+				margin:0 0 20px 0 ;
+			}
+
+			& h3{
+				color: #0079C1;
+				font-size: 2em;	
+				font-weight: bolder;
+			}	
+			
+			& h4{
+				font-size: 1.5em;
+				margin:0 0 20px 0 ;
+			}
+
+			& *{
+				flex-basis: 100%;
+			}
+
+		}		
 	}
 }

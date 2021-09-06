@@ -4,9 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+declare global {
+  var paypal:any;
+  var PayPalButton:any;
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App  />
   </React.StrictMode>,
   document.getElementById('root')
 );

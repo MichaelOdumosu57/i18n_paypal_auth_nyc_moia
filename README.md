@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a0eedb4e-8218-4237-b0d5-2329cbb249a4/deploy-status)](https://app.netlify.com/sites/keen-davinci-0ff8a8/deploys)
+
 # Summary
 
 * this project is a redo of my work for nyc MOIA with a good friend in graduate studies
@@ -37,6 +39,7 @@ Only members of the project can read the README.md from the ignore folder
 * puffing billy v2.4.1
 
 ## Hosting
+* Netlify
 
 ### CMS
 

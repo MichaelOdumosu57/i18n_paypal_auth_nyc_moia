@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/i18n_paypal_auth_nyc_moia/static/css/main.47f3ce12.chunk.css",
-    "main.js": "/i18n_paypal_auth_nyc_moia/static/js/main.bee07c54.chunk.js",
-    "main.js.map": "/i18n_paypal_auth_nyc_moia/static/js/main.bee07c54.chunk.js.map",
-    "runtime-main.js": "/i18n_paypal_auth_nyc_moia/static/js/runtime-main.30073120.js",
-    "runtime-main.js.map": "/i18n_paypal_auth_nyc_moia/static/js/runtime-main.30073120.js.map",
-    "static/js/2.d039e0e5.chunk.js": "/i18n_paypal_auth_nyc_moia/static/js/2.d039e0e5.chunk.js",
-    "static/js/2.d039e0e5.chunk.js.map": "/i18n_paypal_auth_nyc_moia/static/js/2.d039e0e5.chunk.js.map",
-    "static/js/3.9bdcc490.chunk.js": "/i18n_paypal_auth_nyc_moia/static/js/3.9bdcc490.chunk.js",
-    "static/js/3.9bdcc490.chunk.js.map": "/i18n_paypal_auth_nyc_moia/static/js/3.9bdcc490.chunk.js.map",
-    "index.html": "/i18n_paypal_auth_nyc_moia/index.html",
-    "static/css/main.47f3ce12.chunk.css.map": "/i18n_paypal_auth_nyc_moia/static/css/main.47f3ce12.chunk.css.map",
-    "static/js/2.d039e0e5.chunk.js.LICENSE.txt": "/i18n_paypal_auth_nyc_moia/static/js/2.d039e0e5.chunk.js.LICENSE.txt",
-    "static/media/App.scss": "/i18n_paypal_auth_nyc_moia/static/media/waltograph42.5c673f03.ttf"
+    "main.css": "/static/css/main.a93abfc7.chunk.css",
+    "main.js": "/static/js/main.bee07c54.chunk.js",
+    "main.js.map": "/static/js/main.bee07c54.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d888f95e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d888f95e.js.map",
+    "static/js/2.4171d260.chunk.js": "/static/js/2.4171d260.chunk.js",
+    "static/js/2.4171d260.chunk.js.map": "/static/js/2.4171d260.chunk.js.map",
+    "static/js/3.9bdcc490.chunk.js": "/static/js/3.9bdcc490.chunk.js",
+    "static/js/3.9bdcc490.chunk.js.map": "/static/js/3.9bdcc490.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.a93abfc7.chunk.css.map": "/static/css/main.a93abfc7.chunk.css.map",
+    "static/js/2.4171d260.chunk.js.LICENSE.txt": "/static/js/2.4171d260.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/static/media/waltograph42.5c673f03.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.30073120.js",
-    "static/js/2.d039e0e5.chunk.js",
-    "static/css/main.47f3ce12.chunk.css",
+    "static/js/runtime-main.d888f95e.js",
+    "static/js/2.4171d260.chunk.js",
+    "static/css/main.a93abfc7.chunk.css",
     "static/js/main.bee07c54.chunk.js"
   ]
 }

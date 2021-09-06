@@ -4,7 +4,8 @@ import logo from './logo.svg';
 import '../App.scss';
 import { mediaPrefix,classPrefix } from '../customExports'
 import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
-
+import PageOne from './pageOne'
+import PageTwo from './pageTwo'
 
 let prefix = classPrefix({view:"Home"})
 
@@ -49,9 +50,17 @@ export default class HomePod extends Component{
                 <nav
                 className={prefix({val:"Pod0"})}
                 >
+
+
                     <button
                     className={prefix({val:"Pod0Button"})}
                     >Log Out</button>
+
+                    <button
+                    className={prefix({val:"Pod0Button"})}
+                    onClick={this.checkout.onClick}
+                    >Checkout
+                    </button>                    
 
                 </nav>
                 <nav
@@ -91,15 +100,15 @@ export default class HomePod extends Component{
                         <h3
                         className={prefix({val:'Pod2Page0Text0'})}
                         >
-                            https://www.brooklyn-usa.org/bulletins-events/bengali-new-year-celebration-2020    
-                        </h3> 
-                                           
+                            www.bangladeshsocietyinc.com
+                        </h3>                  
                     </div>
+
+                    <PageOne />
+                    <PageTwo />
                 </div>
 
-                <button
-                onClick={this.checkout.onClick}
-                >Checkout</button>
+
             </div>
         )
     }

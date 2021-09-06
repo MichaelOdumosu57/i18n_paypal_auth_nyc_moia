@@ -1,6 +1,12 @@
 @import "./styles/util";
 @import "./styles/fonts";
 
+:root{
+	--color0:#04F9F2;
+	--color1:#483248;
+	--color2:#482948;
+}
+
 .a_p_p_{
 
 	&Home{
@@ -66,7 +72,7 @@
 			&Page0{
 				width:500px;
 				height: 800px;
-				background-color:#483248;
+				background-color:var(--color1);
 				display: flex;
 				align-items: flex-start;
 				flex-wrap: wrap;
@@ -103,7 +109,6 @@
 					}
 
 				}
-
 
 				&Img{
 
@@ -146,12 +151,307 @@
 					}
 
 					&1{
-						@include outline;
 						width: 100%;
 						
 					}
 				}
 			}
+
+			&Page1{
+				width:1500px;
+				height: 800px;
+				background-color:var(--color1);
+				display: flex;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				justify-content: center;
+				// padding:20px 0;
+				margin:20px 0 0 0;
+
+				@for $i from 0 through 2 {
+					&Sect#{$i} {
+						flex-basis:  33%;
+						height: 100%;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						align-content: flex-start;
+
+						& *{
+							margin: 0 0 20px 0;
+							padding:0 20px;
+							@include tac;
+						}						
+
+						h3 {
+							font-size: 2em;
+						}
+	
+						p {
+							font-size: 1.5em;
+
+							&:nth-of-type(2n+1){
+								color:var(--color0);
+							}
+						}						
+					}
+				}
+
+				&Sect0{
+
+
+					&Img{
+
+						&0{
+							background-size: cover;
+							height:200px;
+							flex: 1 0 100%;
+							background-image: url("assets/media/home6.jpg");
+							padding:0px;
+						}
+
+						&1{
+							background-size: cover;
+							height:100px;
+							flex-basis:  12%;	
+							border-radius:300px;
+							background-image: url("assets/media/home9.jpg");						
+						}
+
+						&2{
+							background-size: cover;
+							height:130px;
+							flex-basis:  40%;	
+							border-radius:300px;
+							background-image: url("assets/media/home10.jpg");								
+						}
+
+					}
+
+					&Text{
+						&0{
+							flex-basis: 60%;
+						}
+
+						&1{
+							flex-basis: 40%;
+						}						
+					}
+
+
+				}
+
+				&Sect1{
+				
+					&Img{
+						&0{
+							background-size: cover;
+							height:200px;
+							width: 100%;
+							background-image: url("assets/media/home7.jpg")
+						}	
+						&1{
+							background-size: cover;
+							height:100px;
+							flex-basis: 33%;
+							border-radius: 120px;
+							background-image: url("assets/media/home11.jpg")
+						}	
+						&2{
+							background-size: cover;
+							height:100px;
+							flex-basis: 33%;
+							border-radius: 120px;
+							background-image: url("assets/media/home12.jpg")
+						}																		
+					}
+
+					&Text{
+						&0{
+							flex-basis: 40%;
+						}
+						&1{
+							flex-basis: 40%;
+						}						
+					}
+				}	
+				
+				&Sect2{
+					&Text{
+						&0{
+							flex-basis:57%;
+						}
+						&1{
+							flex-basis: 32%;
+						}
+						&2{
+							flex-basis: 32%;
+						}						
+					}
+					&Img{
+						&0{
+							background-size: cover;
+							height:200px;
+							width: 100%;
+							background-image: url("assets/media/home8.jpg");
+						}	
+						
+						&1{
+							// background-size: contain;
+							// padding:0;
+							height:150px;
+							// @include outline;
+							justify-self: flex-end;
+							margin:0 0 0 0px;
+							padding:0;
+							flex-basis: 22%;
+							background-image: url("assets/media/home13.PNG");
+						}	
+						
+						&2{
+							background-size: cover;
+							height:150px;
+							border-radius: 100%;
+							justify-self: flex-end;
+							margin:0 0 0 0px;
+							padding:0;
+							flex-basis: 150px;
+							background-image: url("assets/media/home14.jpg");
+						}		
+						
+						&3{
+							background-size: cover;
+							background-image: url("assets/media/home15.jpg");
+							height:150px;
+							border-radius: 100%;		
+							flex-basis: 30%;					
+						}
+					}
+				}					
+			}
+
+
+			&Page2{
+				width:500px;
+				height: 800px;
+				background-color:var(--color1);
+				display: flex;
+				align-content: flex-start;
+				flex-wrap: wrap;
+				justify-content: center;
+				padding:20px 0;
+				margin:20px 0 0 0;
+				font-size: 9px;
+
+				&Text{
+					&0{
+						margin: 0 20px ;
+					}
+				}
+
+
+				h3 {
+					font-size: 2em;
+				}
+
+				p {
+					font-size: 1.5em;
+				}				
+
+				&Title{
+
+					&0{
+						font-size: 5em;
+						color:#04F9F2;
+						z-index: 5;
+						@include tac;
+					}
+
+					&1{
+						font-family: Waltograph;
+						font-size: 8em;
+						margin: -45px 0 0 0;
+						color: yellow;
+						@include tac;
+					}
+
+					&2{
+						
+						background-color: rgba(0,0,0,0.5);
+						transform: rotate(90deg);
+						transform-origin: center;
+						font-size: 6em;
+						// margin: 120px 0 0 0;
+						padding:0 20px;
+						letter-spacing: 40px;
+						width: 500px;
+					}
+
+				}
+
+				&Img{
+
+					&0{
+						background-image:url("./assets/media/home0.PNG");
+						background-size: contain;
+						height:100px;
+						width: 100px;						
+					}
+					&1{
+						background-image:url("./assets/media/home1.PNG");
+						background-size: contain;
+						height:100px;
+						width: 100px;						
+					}		
+					
+					&2{
+						background-image:url("./assets/media/home16.PNG");
+						height:100px;
+						width: 100px;					
+					}
+
+					&3{
+						background-image:url("./assets/media/home17.png");
+						height:100px;
+						width: 100px;					
+					}	
+					&4{
+						background-image:url("./assets/media/home19.png");
+						height:100px;
+						width: 100px;						
+					}	
+					&5{
+						background-size: cover;
+						background-image:url("./assets/media/home18.jpg");
+						height:180px;
+						width: 100%;
+						margin:20px 0 0 0;				
+					}															
+				}
+
+				&Text{
+					&0{
+						font-size: 2em;
+						width: 80%;
+						@include tac;
+						margin:20px 20px 0 20px;
+					}
+				}
+
+				&Item{
+					&0{
+						border-radius: 100%;
+						height: 400px;
+						flex-basis: 80%;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-evenly;
+						align-items: center;
+						background-color: var(--color2);
+						margin:30px 0 0 0;						
+					}
+				}
+			}			
 		}
 	}
 	&Login{

@@ -10,14 +10,22 @@ let prefix = classPrefix({view:"CheckoutPod2"})
 
 
 
-export default class Checkout<Props extends any> extends Component<Props>{
+type Props = {
+    downloadPDF:Function,
+}
+export default class Checkout extends Component<any,any>{
     constructor(props: any) {
         super(props);
+
+
+        this.createOrder = this.createOrder.bind(this)   
+        this.onApprove = this.onApprove.bind(this)   
     }
 
 
 
     createOrder(data, actions) {
+ 
         return actions.order.create({
           purchase_units: [
             {
@@ -31,6 +39,7 @@ export default class Checkout<Props extends any> extends Component<Props>{
     
     onApprove(data, actions) {
         alert("Payment Received");
+        (this.props as any).downloadPDF();
         return actions.order.capture();
     }    
     
@@ -43,7 +52,7 @@ export default class Checkout<Props extends any> extends Component<Props>{
                 ["emma@example.com","67621267792","Online PDF"][i]
                 }</h4>
             return (
-                <>
+                < >
                 {h3}{h4}
                 </>
             )
@@ -51,7 +60,7 @@ export default class Checkout<Props extends any> extends Component<Props>{
     }
 
     render(){
-        let myPayPal = (this.props as any).myPayPal
+
         return (
             <div
             className={prefix({val:''})}

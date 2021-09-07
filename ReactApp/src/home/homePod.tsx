@@ -6,17 +6,56 @@ import { mediaPrefix,classPrefix } from '../customExports'
 import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
 import PageOne from './pageOne'
 import PageTwo from './pageTwo'
+import html2canvas from 'html2canvas';
+import { debug } from 'console';
 
+type Props = {
+    addImage:Function,
+    changeRoute:Function
+}
 let prefix = classPrefix({view:"Home"})
 
-export default class HomePod extends Component{
+export default class HomePod extends Component<Props>{
     constructor(props: any) {
-        super(props);
+        super(props);        
+        this.checkout.onClick = this.checkout.onClick.bind(this) 
+
     }
 
     checkout = {
         onClick:()=>{
-            (this.props as any).changeRoute({route:"/checkout"})
+            let target = document.querySelector(".a_p_p_HomePod2");
+
+            
+            html2canvas(
+                (target as HTMLElement),
+                {
+                    logging:true,
+                    backgroundColor:"#1a2632",
+                    // height:1000,
+
+
+                }
+            )    
+            .then((canvas)=>{
+                console.log(canvas)
+                var imgWidth = 205;
+                // var imgHeight = canvas.height * imgWidth / canvas.width ;
+                // imgHeight += 60;
+                var imgHeight = 285.1243455497382;
+                const contentDataURL = canvas.toDataURL('image/png')
+
+                
+                var x = 2;
+                var y = 2;
+                (this.props as any).addImage(
+                    contentDataURL, 'PNG', x, y, imgWidth, imgHeight
+                );
+                
+                // pdf.save('brochure.pdf');    
+                // (this.props as any).changeRoute({route:"/checkout"});            
+            });        
+            
         }
     }
 

@@ -21,6 +21,8 @@ Only members of the project can read the README.md from the ignore folder
 * okta 
 * react-paypal-js 7.3.3
 * gh-pages 3.2.3
+* jspdf : 2.3.1
+* html2canvs: 1.3.2
 ## Backend
 
 
@@ -92,18 +94,32 @@ refer to README.md in ignore
 ## Site Navigation
 
 
-### Home Page 
+### Login Page
+* the users signs in with okta SSO
 
+### Home Page 
+* the user sees the brouchure
+
+### Checkout
+* the  user pays for the item using paypal custom checkout
 
 # Aspects
 
 ## Challenges
-* any time i faced an issue I thought in terms of angular
+* dealing with props and typescript
+* understanding how I needed to use useHistory and place BrowoserRouter in the index.tsx
+so I can use the histroy getter in App.tsx
+    * I understand we need [get,set] = useState(val), to use set to update the val
+    *  I understand we need get to see changes we made to the val
+    * I understand we need the useEffect with deps array to watch for certain changes, and make side effects as needed 
+    * I understand if we dont use react-router the state resets when we navigate using the browser API
 
 ## Mistakes/Failures
 
-## Enjoyed
 
+## Enjoyed
+* building a major project in React
+* even though i needed more components still fun
 ## Leadership
 
 ## Conflict

@@ -1,5 +1,5 @@
 
-import React, { Component } from "react";
+import React, { Component,useEffect,useState } from "react";
 import logo from './logo.svg';
 import './App.scss';
 import { SecureRoute, Security, LoginCallback } from '@okta/okta-react';
@@ -10,6 +10,9 @@ import CheckoutPod from './checkout/checkoutPod';
 
 import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
 import { OktaAuth, toRelativeUrl } from '@okta/okta-auth-js';
+import { jsPDF } from "jspdf";
+import {Link} from 'react-router-dom';
+
 
 let oktaAuth = new OktaAuth({
     issuer: 'https://outlookwindmillcode.okta.com',
@@ -34,8 +37,47 @@ export default function App() {
         window.location.href = window.location.origin+route
     }
 
+    let pdf = new jsPDF('p', 'mm', 'a4');
+    let stat = 0;
+    let [myPdf,setMyPdf] = useState({
+        pdf:new jsPDF('p', 'mm', 'a4'),
+        val:1
+    });
+    let [myStat,setStat] = useState(0)
+    useEffect(()=>{
+        console.log(myPdf.val)
+    },[myStat,myPdf])
+
+    let addImage = (a,b,c,d,e,f)=>{
+        
+        
+        setMyPdf((prevPdf)=>{
+            prevPdf.pdf.addImage(a,b,c,d,e,f);
+            prevPdf.val +=1
+            return prevPdf
+        })
+        setStat(() => {return 1});
+        // setMyPdf(() => myPdf);
+        history.push("/checkout")
+        
+    }
+
+    let downloadPDF = ()=>{
+        setMyPdf((prevPdf)=>{
+            prevPdf.pdf.save("brochure.pdf")
+            prevPdf.val +=1
+            return prevPdf
+        })        
+        console.log(myPdf)
+    }
+
+    
+    let consolePDF = ()=>{
+        console.log(stat,myStat)
+        console.log(myPdf)
+    }
+
     return (
-        <BrowserRouter>
             <Security 
             oktaAuth={oktaAuth} 
             restoreOriginalUri={restoreOriginalUri}
@@ -52,9 +94,10 @@ export default function App() {
                         } />
                     <Route 
                         path="/home"
-                        render={(props) => {
+                        render={(props:any) => {
 
-                            (props as any).changeRoute = changeRoute
+                            props.addImage = addImage;
+                            props.changeRoute = changeRoute;
                             return <HomePod  {...props} />
                         }
                         }
@@ -63,15 +106,16 @@ export default function App() {
                     <Route
                     path="/checkout"
                     exact
-                    render={(props) => {
+                    render={(props:any) => {
 
-                        (props as any).changeRoute = changeRoute;
+                        props .changeRoute = changeRoute;
+                        props .downloadPDF = downloadPDF;
+                        props.consolePDF= consolePDF;
                         return <CheckoutPod  {...props} />
                     }
                     } />                        
                     
                 </Switch>
-            </ Security>        
-        </BrowserRouter>
+            </ Security>     
     )
 }

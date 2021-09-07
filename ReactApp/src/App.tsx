@@ -98,6 +98,8 @@ export default function App() {
 
                             props.addImage = addImage;
                             props.changeRoute = changeRoute;
+                            props.history=history;
+                            props.oktaAuth = oktaAuth
                             return <HomePod  {...props} />
                         }
                         }

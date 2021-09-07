@@ -11,7 +11,9 @@ import { debug } from 'console';
 
 type Props = {
     addImage:Function,
-    changeRoute:Function
+    changeRoute:Function,
+    history:any,
+    oktaAuth:any
 }
 let prefix = classPrefix({view:"Home"})
 
@@ -59,6 +61,13 @@ export default class HomePod extends Component<Props>{
         }
     }
 
+    logOut = {
+        onClick : ()=>{
+            this.props.oktaAuth.tokenManager.clear();
+            this.props.history.push("/")
+        }
+    }
+
     languages = {
         items:[
             "English","Spanish", "Chinese", "Russian", "French", "Bengali", "Korean", "Arabic", "Urdu", "Polish", "Haitian Creole"
@@ -92,6 +101,7 @@ export default class HomePod extends Component<Props>{
 
 
                     <button
+                    onClick={this.logOut.onClick}
                     className={prefix({val:"Pod0Button"})}
                     >Log Out</button>
 
